@@ -286,7 +286,7 @@ export default function HomePage() {
                 只有得分聚合用于改进同龄常模。可以中途保存。可以反悔说 「这不像我」。
               </p>
             </div>
-            <div className="col-span-12 lg:col-span-4 lg:text-right mt-6 lg:mt-0 flex flex-col gap-3 lg:items-end">
+            <div className="col-span-12 lg:col-span-4 lg:text-right mt-6 lg:mt-0 flex flex-col gap-3 lg:items-stretch">
               <Link href="/sample-report" className="btn-primary w-full justify-center">SEE A SAMPLE</Link>
               <Link href="/assessment" className="btn-ghost w-full justify-center">START YOUR OWN</Link>
             </div>
