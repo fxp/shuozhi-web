@@ -16,6 +16,11 @@
     "enabled": true
   },
 
+  // workers.dev must stay enabled — CF Pages Function proxies to this URL.
+  // Do NOT add a xiaopingfeng.com route here: CF Pages intercepts that zone
+  // and routing to a Worker on the same zone creates a loop.
+  "workers_dev": true,
+
   // public env vars (non-secret)
   // 注意: 实际 API key 走 `wrangler secret put BIGMODEL_API_KEY`, 不在这里
   "vars": {
