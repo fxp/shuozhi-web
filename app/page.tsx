@@ -296,7 +296,7 @@ export default function HomePage() {
 
       <footer className="border-t border-frost">
         <div className="container-wide py-6 grid grid-cols-12 gap-4 items-baseline">
-          <div className="col-span-12 sm:col-span-6 label-mono">© SHUOZHI · 2026 · BFI-2/CN LICENSE</div>
+          <div className="col-span-12 sm:col-span-6 label-mono">© SHUOZHI · 2026 · 非商业项目 · 仅用于演示 AI 技术能力</div>
           <div className="col-span-12 sm:col-span-6 label-mono sm:text-right">
             未成年人个人信息处理规则 · 隐私 · 联系
           </div>
