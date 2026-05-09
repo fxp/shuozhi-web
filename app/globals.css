@@ -157,7 +157,7 @@
     display: inline-flex;
     align-items: center;
     gap: 14px;
-    padding: 12px 18px 12px 22px;
+    padding: 13px 18px 13px 22px;
     background: transparent;
     color: var(--ink);
     border: 1px solid var(--ink);

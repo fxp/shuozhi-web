@@ -287,8 +287,8 @@ export default function HomePage() {
               </p>
             </div>
             <div className="col-span-12 lg:col-span-4 lg:text-right mt-6 lg:mt-0 flex flex-col gap-3 lg:items-end">
-              <Link href="/sample-report" className="btn-primary">SEE A SAMPLE</Link>
-              <Link href="/assessment" className="btn-ghost">START YOUR OWN</Link>
+              <Link href="/sample-report" className="btn-primary w-full justify-center">SEE A SAMPLE</Link>
+              <Link href="/assessment" className="btn-ghost w-full justify-center">START YOUR OWN</Link>
             </div>
           </div>
         </div>
