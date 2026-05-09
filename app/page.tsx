@@ -45,6 +45,10 @@ export default function HomePage() {
                 4 个字母的标签 —— 而是把你的<span className="italic-moment text-signal"> 116 道作答 </span>
                 映射到具体得分,再换算成专业 + 选科建议。
               </p>
+              <p className="text-[13px] leading-[1.6] text-ink-mute max-w-[420px] mt-4 font-mono">
+                朔（shuò）— 农历初一,新月,起始。知（zhī）— 认知,了解自己。
+                <br />在人生第一个重要岔口认识自己。
+              </p>
             </div>
           </div>
 
@@ -189,7 +193,8 @@ export default function HomePage() {
                     <span className="label-mono-signal">WHY</span>{" "}{it.why}
                   </p>
                   <p className="font-serifcn text-[13.5px] leading-[1.7] text-ink">
-                    <span className="label-mono-ink">→ 我们怎么做</span>{" "}{it.use}
+                    <span className="label-mono-ink">→ 我们怎么做</span>
+                    <br /><br />{it.use}
                   </p>
                 </div>
               </div>
