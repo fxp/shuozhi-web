@@ -194,7 +194,9 @@ export default function HomePage() {
                   </p>
                   <p className="font-serifcn text-[13.5px] leading-[1.7] text-ink">
                     <span className="label-mono-ink">→ 我们怎么做</span>
-                    <br /><br />{it.use}
+                  </p>
+                  <p className="font-serifcn text-[13.5px] leading-[1.7] text-ink mt-3">
+                    {it.use}
                   </p>
                 </div>
               </div>
