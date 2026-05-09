@@ -1,0 +1,42 @@
+name: Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: OpenNext build
+        run: pnpm cf:build
+
+      - name: Deploy to Cloudflare Workers
+        # cf:deploy 内部走 wrangler;wrangler 自动读 CLOUDFLARE_API_TOKEN +
+        # CLOUDFLARE_ACCOUNT_ID 环境变量。Worker 上已经配置的 secrets
+        # (BIGMODEL_API_KEY / ADMIN_PASS / SUPABASE_SERVICE_KEY)持久存在,
+        # 不需要在 CI 重新注入。
+        run: pnpm cf:deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

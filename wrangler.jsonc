@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "shuozhi-web",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+
+  // assets bucket served by the worker
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+
+  // observability — captures logs/errors in Cloudflare dashboard
+  "observability": {
+    "enabled": true
+  },
+
+  // public env vars (non-secret)
+  // 注意: 实际 API key 走 `wrangler secret put BIGMODEL_API_KEY`, 不在这里
+  "vars": {
+    "BIGMODEL_MODEL": "glm-5.1",
+    "BIGMODEL_BASE_URL": "https://open.bigmodel.cn/api/paas/v4",
+    "SUPABASE_URL": "https://nnkeykkzgsqytbcgfyyd.supabase.co",
+    // Supabase anon key is designed to be public-facing (RLS controls access).
+    // Not a secret — safe in vars.
+    "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ua2V5a2t6Z3NxeXRiY2dmeXlkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgzMjE0NzEsImV4cCI6MjA5Mzg5NzQ3MX0.6uw51G3vFHXeM5-xdG7rpUl9KDjFqAU-UqMd2s44PaA"
+  }
+}

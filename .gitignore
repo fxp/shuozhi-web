@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.env*
+!.env.example
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+.icloud
+
+# Cloudflare / OpenNext
+.open-next
+.wrangler
+.dev.vars
+
